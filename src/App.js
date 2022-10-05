@@ -1,8 +1,13 @@
 import React, { useState } from "react";
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
-function App({ tasks, addTask }) {
+import { actions } from './actions/todo';
+import { selectors } from './selectors/todo';
+
+function App() {
   const [task, updateTask] = useState('')
+  const dispatch = useDispatch()
+  const tasks = useSelector(selectors.getTasks)
 
   const handleInputChange = event => {
     updateTask(event.target.value)
@@ -10,7 +15,7 @@ function App({ tasks, addTask }) {
 
   const handleFormSubmit = event => {
     event.preventDefault();
-    addTask(task)
+    dispatch(actions.addTask(task))
 
     updateTask('')
   }
@@ -30,18 +35,5 @@ function App({ tasks, addTask }) {
   );
 }
 
-const mapStateToProps = (state) => ({
-  tasks: state,
-})
 
-const mapDispatchToProps = (dispatch) => ({
-  addTask: task => dispatch({
-    type: 'ADD_TASK',
-    payload: task
-  })
-})
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(App);
+export default App;
