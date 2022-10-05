@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { actions } from './actions/todo';
 import { selectors } from './selectors/todo';
+import './App.css'
 
 function App() {
   const [task, updateTask] = useState('')
@@ -21,17 +22,27 @@ function App() {
   }
 
   return (
-    <>
+    <div className="app">
+      <h1 className="app-title">Todo Redux</h1>
+      
       <form onSubmit={ handleFormSubmit }>
-        <input onChange={ handleInputChange } value={ task }/>
-        <button>Add</button>
+        <input className="task-input" onChange={ handleInputChange } value={ task }/>
+        <button className="add-todo task-button">Add</button>
       </form>
-      <ul>
+
+      <ul className="tasks-list">
         {tasks.map((t, i ) => (
-          <li key={ i }>{ t }</li>
+          <div className="task-item">
+          <li className="task-li" key={ i }>{ t }</li>
+          <div>
+            <button className="update-task-button">update-${i}</button>
+            <button className="remove-task-button">remove-${i}</button>
+          </div>
+          </div>
         ))}
       </ul>
-    </>
+
+    </div>
   );
 }
 
