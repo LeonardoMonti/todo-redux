@@ -7,6 +7,9 @@ const tasks = handleActions({
   [actions.addTask]: (state, action) => [
     ...state,
     action.payload
+  ],
+  [actions.removeTask]: (state, action) => [
+    ...state.filter(task => task.id !== action.payload.id),
   ]
 }, [])
 
