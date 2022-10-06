@@ -66,7 +66,7 @@
 
 .task-buttons {
   display: flex;
-  gap: 10px;
+  gap: 3px;
 }
 
 .task-item {
@@ -74,18 +74,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-align: center;
-
   padding : 8px 20px;
-  color: white;
+  color:  var(--white-text);
   margin-bottom: 20px;
   border-bottom: 1px solid ;
 }
 
 .task-li {
   white-space: wrap;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  text-align: start;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.task-text {
+  font-size: 1.2rem;
+  text-align: start;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  margin-bottom: 5px;
+}
+
+.task-date {
+  font-size: 0.9rem;
 }
 
 .remove-task-button {
@@ -93,7 +109,7 @@
   border: none;
   height: 32px;
   color: var(--white-text);
-  width: 70px;
+  width: 45px;
   transition: 0.5s;
 }
 
@@ -106,17 +122,17 @@
   color: var(--white-text);
 }
 
-/* .update-task-button {
-  background-color: #0d6e0d;
+.update-task-button {
+  background-color: transparent;
   height: 32px;
   color: white;
   border-radius: 4px;
-  width: 70px;
+  width: 45px;
   border:none;
   transition: 0.3s;
 }
 
 .update-task-button:hover {
   cursor: pointer;
-  background-color: #0e7c0e;
-} */
+  opacity: 0.6;
+}
