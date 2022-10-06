@@ -61,11 +61,18 @@ body {
   padding : 0px;
 }
 
+.task-buttons {
+  display: flex;
+  gap: 10px;
+}
+
 .task-item {
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+
   padding : 8px 20px;
   color: white;
   margin-bottom: 20px;
@@ -79,21 +86,21 @@ body {
 }
 
 .remove-task-button {
-  background-color: #ac3b61;
+  background-color: transparent;
   height: 32px;
-  color: white;
+  color: #e4f2f7;
   border-radius: 4px;
   width: 70px;
   border:none;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .remove-task-button:hover {
   cursor: pointer;
-  background-color: #bd4b71;
+  opacity: 0.6;
 }
 
-.update-task-button {
+/* .update-task-button {
   background-color: #0d6e0d;
   height: 32px;
   color: white;
@@ -106,4 +113,4 @@ body {
 .update-task-button:hover {
   cursor: pointer;
   background-color: #0e7c0e;
-}
+} */
