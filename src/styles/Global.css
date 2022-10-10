@@ -1,0 +1,29 @@
+:root {
+  --white-text: #fdfdfd;
+
+  --primaryBlue: #11579c;
+  --secondBlue: #05386b;
+  --primaryPurple: #646ff0;
+	--black: black;
+	--white: white;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  padding: 0px;
+  margin: 0px;
+  color: rgba(0,0,0,0.9);
+  font-family: 'Lato', sans-serif;
+	width: 100%;
+	min-height: 100vh;
+}
+
+.container {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
