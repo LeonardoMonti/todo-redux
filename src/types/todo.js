@@ -1,6 +1,7 @@
 const types = {
-  TODO_ADD_TASK: 'TODO_ADD_TASK',
-  TODO_REMOVE_TASK: 'TODO_REMOVE_TASK',
-}
+  TODO_ADD_TASK: "TODO_ADD_TASK",
+  TODO_REMOVE_TASK: "TODO_REMOVE_TASK",
+  TODO_UPDATE_TASK: "TODO_UPDATE_TASK",
+};
 
-export { types }
+export { types };
