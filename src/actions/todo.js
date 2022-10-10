@@ -1,10 +1,11 @@
-import { createAction } from 'redux-actions'
+import { createAction } from "redux-actions";
 
-import { types } from '../types/todo';
+import { types } from "../types/todo";
 
 const actions = {
-  addTask: createAction(types.TODO_ADD_TASK),
-  removeTask: createAction(types.TODO_REMOVE_TASK),
-}
+  addTodo: createAction(types.TODO_ADD_TASK),
+  removeTodo: createAction(types.TODO_REMOVE_TASK),
+  updateTodo: createAction(types.TODO_UPDATE_TASK),
+};
 
-export { actions }
+export { actions };
