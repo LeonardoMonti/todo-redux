@@ -1,21 +1,30 @@
-import { combineReducers } from 'redux';
-import { handleActions } from 'redux-actions';
+import { combineReducers } from "redux";
+import { handleActions } from "redux-actions";
 
-import { actions } from '../actions/todo';
+import { actions } from "../actions/todo";
 
 const tasks = handleActions({
-  [actions.addTask]: (state, action) => [
+  [actions.addTodo]: (state, action) => [
     ...state,
     action.payload
   ],
-  [actions.removeTask]: (state, action) => [
-    ...state.filter(task => task.id !== action.payload.id),
-  ]
-}, [])
+  [actions.removeTodo]: (state, action) => [
+    ...state.filter(todo => todo.id !== action.payload.id),
+  ],
+  [actions.updateTodo]: (state, action) => [
+    ...state.filter(todo => {
+      if (todo.id === action.payload.id) {
+        todo.status = action.payload.status;
+        todo.title = action.payload.title;
+      }
+      return todo;
+    }),
+  ],
+}, []);
 
 
 const reducers = combineReducers({
   tasks
-})
+});
 
-export { reducers }
+export { reducers };
