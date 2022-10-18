@@ -79,14 +79,14 @@ export function TodoItem({ todo }) {
               onClick={() => handleUpdate()}
               onKeyDown={() => handleUpdate()}
             >
-              <PencilSimpleLine size={32} />
+              <PencilSimpleLine />
             </button>
             <button
               className={styles.icon}
               onClick={() => handleDelete()}
               onKeyDown={() => handleDelete()}
             >
-              <X size={32} />
+              <X />
             </button>
           </div>
           <TodoModal
