@@ -5,8 +5,14 @@ const getTasks = createSelector(
   tasks => tasks,
 );
 
+const filterStatus = createSelector(
+  state => state.todoReducers.filterStatus,
+  filterStatus => filterStatus
+);
+
 const selectors = {
-  getTasks
+  getTasks,
+  filterStatus
 };
 
 export { selectors };

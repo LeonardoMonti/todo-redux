@@ -22,9 +22,13 @@ const tasks = handleActions({
   ],
 }, []);
 
+const filterStatus = handleActions({
+  [actions.updateFilterStatus]: (_state, action) => action.payload,
+}, "all");
 
 const reducers = combineReducers({
-  tasks
+  tasks,
+  filterStatus
 });
 
 export { reducers };
