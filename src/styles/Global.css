@@ -1,9 +1,17 @@
 :root {
   --white-text: #fdfdfd;
-
+	--transparent: rgba(255, 0, 0, 0);
+	--red: #e32525;
   --primaryBlue: #11579c;
   --secondBlue: #05386b;
-  --primaryPurple: #646ff0;
+	--primaryPurple: #646ff0;
+	--black-1: #646681;
+	--black-2: #282828;
+	--bg-1: #f8f8ff;
+	--bg-2: #ecedf6;
+	--bg-3: #cccdde;
+	--gray-1: #eee;
+	--gray-2: #dedfe1;
 	--black: black;
 	--white: white;
 }
@@ -13,13 +21,60 @@ html {
 }
 
 body {
-  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-  padding: 0px;
-  margin: 0px;
+  /* background-image: linear-gradient(to top, #646ff0 0%, #05386b 100%); */
+	background: rgba(100, 111, 240, 1);
+	background: -moz-linear-gradient(45deg, rgba(100, 111, 240, 1) 0%, rgba(5, 56, 107, 1) 100%);
+	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(100, 111, 240, 1)), color-stop(100%, rgba(5, 56, 107, 1)));
+	background: -webkit-linear-gradient(45deg, rgba(100, 111, 240, 1) 0%, rgba(5, 56, 107, 1) 100%);
+	background: -o-linear-gradient(45deg, rgba(100, 111, 240, 1) 0%, rgba(5, 56, 107, 1) 100%);
+	background: -ms-linear-gradient(45deg, rgba(100, 111, 240, 1) 0%, rgba(5, 56, 107, 1) 100%);
+	background: linear-gradient(45deg, rgba(100, 111, 240, 1) 0%, rgba(5, 56, 107, 1) 100%);
+	background-size: 400% 400%;
+	-webkit-animation: errorBg 25s ease infinite;
+	-moz-animation: errorBg 25s ease infinite;
+	animation: errorBg 25s ease infinite;
+  padding: 0;
+  margin: 0;
   color: rgba(0,0,0,0.9);
   font-family: 'Lato', sans-serif;
 	width: 100%;
 	min-height: 100vh;
+}
+
+@-webkit-keyframes errorBg {
+	0% {
+			background-position: 93% 0%
+	}
+	50% {
+			background-position: 0% 100%
+	}
+	100% {
+			background-position: 93% 0%
+	}
+}
+
+@-moz-keyframes errorBg {
+	0% {
+			background-position: 93% 0%
+	}
+	50% {
+			background-position: 0% 100%
+	}
+	100% {
+			background-position: 93% 0%
+	}
+}
+
+@keyframes errorBg {
+	0% {
+			background-position: 93% 0%
+	}
+	50% {
+			background-position: 0% 100%
+	}
+	100% {
+			background-position: 93% 0%
+	}
 }
 
 .container {
