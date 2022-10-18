@@ -74,20 +74,30 @@ export function TodoItem({ todo }) {
             </p>
           </div>
           <div className={styles.todoActions}>
-            <button
-              className={styles.icon}
-              onClick={() => handleUpdate()}
-              onKeyDown={() => handleUpdate()}
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <PencilSimpleLine />
-            </button>
-            <button
-              className={styles.icon}
-              onClick={() => handleDelete()}
-              onKeyDown={() => handleDelete()}
+              <button
+                className={styles.icon}
+                onClick={() => handleUpdate()}
+                onKeyDown={() => handleUpdate()}
+              >
+                <PencilSimpleLine />
+              </button>
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
             >
-              <X />
-            </button>
+              <button
+                className={styles.icon}
+                onClick={() => handleDelete()}
+                onKeyDown={() => handleDelete()}
+              >
+                <X />
+              </button>
+            </motion.a>
           </div>
           <TodoModal
             type="update"

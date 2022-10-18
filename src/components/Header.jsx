@@ -6,6 +6,7 @@ import Button, { SelectButton } from "./Button";
 import { TodoModal } from "./TodoModal";
 
 import styles from "../styles/modules/app.module.scss";
+import { motion } from "framer-motion";
 
 export function Header() {
   const dispatch = useDispatch();
@@ -20,9 +21,14 @@ export function Header() {
 
   return (
     <div className={styles.appHeader}>
-      <Button onClick={() => setModalOpen(true)}>
-        add Task
-      </Button>
+      <motion.a
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      >
+        <Button onClick={() => setModalOpen(true)}>
+          add Task
+        </Button>
+      </motion.a>
       <SelectButton
         id="status"
         onChange={(e) => updateFilter(e)}
