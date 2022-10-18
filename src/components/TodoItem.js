@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
 import { actions } from "../actions/todo";
@@ -7,6 +7,26 @@ import { TodoModal } from "./TodoModal";
 export function TodoItem({ todo }) {
   const dispatch = useDispatch();
   const [updateModalOpen, setUpdateModalOpen] = useState(false);
+  const [checked, setChecked] = useState(false);
+  
+  useEffect(() => {
+    if (todo.status === "complete") {
+      setChecked(true);
+    } else {
+      setChecked(false);
+    }
+  }, [todo.status]);
+
+  const handleCheck = () => {
+    setChecked(!checked);
+    dispatch(actions.
+      updateTodo({ ...todo,
+        status: checked
+        ? "incomplete"
+        : "complete"
+      })
+    );
+  };
 
   const handleDelete = () => {
     dispatch(actions
@@ -22,7 +42,7 @@ export function TodoItem({ todo }) {
 
  return(
   <div>
-    <input type="checkbox" />
+    <input type="checkbox" checked={checked} onChange={ () =>  handleCheck()}/>
     <div>
       <p>{todo.title}</p>
       <p>{todo.time}</p>
