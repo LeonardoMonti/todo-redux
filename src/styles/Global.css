@@ -1,14 +1,16 @@
 :root {
-  --white-text: #fdfdfd;
 	--transparent: rgba(255, 0, 0, 0);
 	--red: #e32525;
   --primaryBlue: #11579c;
-  --secondBlue: #05386b;
-	--primaryPurple: #646ff0;
 	--black-1: #646681;
-	--black-2: #282828;
-	--bg-1: #f8f8ff;
+	--black-2: #112A46;
+	--palete1: #fefcfb;
 	--bg-2: #ecedf6;
+	--palete2: #1282a2;
+	--palete3: #034078;
+	--palete4: #001f54;
+	--palete5: #0a1128;
+	--bg-1: #f8f8ff;
 	--bg-3: #cccdde;
 	--gray-1: #eee;
 	--gray-2: #dedfe1;
@@ -21,18 +23,16 @@ html {
 }
 
 body {
-  /* background-image: linear-gradient(to top, #646ff0 0%, #05386b 100%); */
-	background: rgba(100, 111, 240, 1);
-	background: -moz-linear-gradient(45deg, rgba(100, 111, 240, 1) 0%, rgba(5, 56, 107, 1) 100%);
-	background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(100, 111, 240, 1)), color-stop(100%, rgba(5, 56, 107, 1)));
-	background: -webkit-linear-gradient(45deg, rgba(100, 111, 240, 1) 0%, rgba(5, 56, 107, 1) 100%);
-	background: -o-linear-gradient(45deg, rgba(100, 111, 240, 1) 0%, rgba(5, 56, 107, 1) 100%);
-	background: -ms-linear-gradient(45deg, rgba(100, 111, 240, 1) 0%, rgba(5, 56, 107, 1) 100%);
-	background: linear-gradient(45deg, rgba(100, 111, 240, 1) 0%, rgba(5, 56, 107, 1) 100%);
+	background: rgba(10, 17, 40, 1);
+	background: -moz-linear-gradient(45deg, rgba(10, 17, 40, 0.9) 0%, rgba(10, 17, 40, 1) 100%);
+	background: -webkit-linear-gradient(45deg, rgba(10, 17, 40, 0.9) 0%, rgba(10, 17, 40, 1) 100%);
+	background: -o-linear-gradient(45deg, rgba(10, 17, 40, 0.9) 0%, rgba(10, 17, 40, 1) 100%);
+	background: -ms-linear-gradient(45deg, rgba(10, 17, 40, 0.9) 0%, rgba(10, 17, 40, 1) 100%);
+	background: linear-gradient(45deg, rgba(10, 17, 40, 0.9) 0%, rgba(10, 17, 40, 1) 100%);
 	background-size: 400% 400%;
-	-webkit-animation: errorBg 25s ease infinite;
-	-moz-animation: errorBg 25s ease infinite;
-	animation: errorBg 25s ease infinite;
+	-webkit-animation: errorBg 55s ease infinite;
+	-moz-animation: errorBg 55s ease infinite;
+	animation: errorBg 55s ease infinite;
   padding: 0;
   margin: 0;
   color: rgba(0,0,0,0.9);
