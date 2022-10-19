@@ -11,6 +11,14 @@ import Button from "./Button";
 
 import { actions } from "../actions/todo";
 
+const OPTIONS_LOCALE = {
+  year: 'numeric',
+  month: 'numeric',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+};
+
 const dropIn = {
   hidden: {
     opacity: 0,
@@ -62,7 +70,7 @@ export function TodoModal({
           id: uuidv4(),
           title,
           status,
-          time: new Date().toLocaleDateString(),
+          time: new Date().toLocaleString('pt-br', OPTIONS_LOCALE),
         }));
         setTitle('');
         toast.success('Task added successfully');
