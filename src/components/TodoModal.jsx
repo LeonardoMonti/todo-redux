@@ -12,7 +12,7 @@ import Button from "./Button";
 import { actions } from "../actions/todo";
 
 const OPTIONS_LOCALE = {
-  year: 'numeric',
+  year: '2-digit',
   month: 'numeric',
   day: 'numeric',
   hour: 'numeric',
