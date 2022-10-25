@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
-import { PencilSimpleLine, X } from "phosphor-react";
+import { PencilSimpleLine, Trash } from "phosphor-react";
 import { actions } from "../actions/todo";
 import { TodoModal } from "./TodoModal";
 import styles from "../styles/modules/todoItem.module.scss";
@@ -95,7 +95,7 @@ export function TodoItem({ todo }) {
                 onClick={() => handleDelete()}
                 onKeyDown={() => handleDelete()}
               >
-                <X />
+                <Trash />
               </button>
             </motion.a>
           </div>
